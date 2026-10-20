@@ -38,15 +38,15 @@ if opcion == "Ver Inventario y Tablas":
     
     with tab1:
         df_m = pd.read_excel(ARCHIVO_EXCEL, sheet_name='Maestro_Inventario')
-        st.dataframe(df_m, width=None)
+        st.dataframe(df_m, use_container_width=True)
         
     with tab2:
         df_mov = pd.read_excel(ARCHIVO_EXCEL, sheet_name='Movimientos')
-        st.dataframe(df_mov, width=None)
+        st.dataframe(df_mov, use_container_width=True)
         
     with tab3:
         df_r = pd.read_excel(ARCHIVO_EXCEL, sheet_name='Remanentes_Proyectos')
-        st.dataframe(df_r, width=None)
+        st.dataframe(df_r, use_container_width=True)
 
 elif opcion == "Registrar Entrada / Salida / Retorno":
     st.header("📥 / 📤 Registrar Movimiento")
